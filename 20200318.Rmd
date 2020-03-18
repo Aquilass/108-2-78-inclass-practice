@@ -12,6 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## R Markdown
 ## packages
 ```{r}
+library(readr)
 library(googlesheets4)
 library(dplyr)
 library(lubridate)
@@ -20,6 +21,50 @@ library(lubridate)
 ```{r}
 myelement <- 90
 myelements <- 900
+num1 <- c(90,90,90)
+num4 <- c(num1+myelements)
 ```
+```{r}
+library(readr)
+exDataPost80s <- read_csv("C:/Users/oscar/Desktop/github/108-2-78-inclass-practice/data/exDataPost80s.csv")
+View(exDataPost80s)
+hypothesisData <- read_csv("data/hypothesisData.csv")
+View(hypothesisData)
+
+library(googlesheets4)
+`出席狀況表單網址` <-  # 缺乏定義值
+ss <- as_sheets_id(`出席狀況表單網址`)
+homework_sheet <- sheets_read(ss,sheet=1)
+```
+```{r}
+dialogue <- c(''小明說：明天不用上課。'',''小花說：真的嗎？'')
+cat(dialogue, sep="\n")
+```
+```{r}
+'我的年紀' <- 23
+my_age <- '我的年紀'
+class(my_age)
+
+```
+```{r}
+vNum1 <- c(-1,5)
+vNum2 <- c(2,3)
+vNum4 <- c() # 空向量
+
+```
+```{r}
+vNum3 <- c(vNum2, vNum1)
+vNum4 <- c(vNum4, vNum1)
+```
+
+
+
+
+
+
+
+
+
+
 
 
