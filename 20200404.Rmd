@@ -98,3 +98,9 @@ Prisoners_dillemma$each_players_strategy$B$strategy2
 Prisoners_dillemma$eventual_outcome$`A:strategy1`$`B:strategy2` # `A:strategy1`$`B:strategy2`下的payoff
 ```
 
+```{r}
+library(jsonlite)
+toJSON(Prisoners_dillemma)
+```
+
+
