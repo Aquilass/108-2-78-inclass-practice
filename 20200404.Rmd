@@ -1,0 +1,19 @@
+---
+title: '20200404'
+author: "oscar"
+date: "2020/4/4"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+listexample <- list(2,6,6)
+print(listexample)
+library(lubridate)
+c("")
+`小明交易`
+```
+
