@@ -111,5 +111,13 @@ fromJSON("https://opendata.cwb.gov.tw/fileapi/v1/opendataapi/F-C0032-001?Authori
 )
 ```
 
-
+```{r}
+yy <- 2020
+mm <- 03
+dd <- 15
+event_list <- list(
+  list(time=ymd("yy,mm,dd")),
+  list(name="小明","是否完成" = "True","完成所花時間(秒)" = 350,tools=c("anchor","axe"))
+     )
+```
 
