@@ -10,6 +10,42 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r}
+listExample <- 
+  list(
+    student="小明",
+    `學期`=list(
+      `108-1`=list(
+        list(
+          name="個體經濟學",
+          teacher="Alice",
+          grade=85
+        )
+      ),
+      `108-2`=list(
+        list(
+          name="總體經濟學",
+          teacher="Mark",
+          grade=78
+        )
+      )
+    )
+  )
+# 有多少位置可選：
+length(listExample)
+```
+```{r}
+str(listExample)
 
+# 108-1新增一科目成績
+listExample[["學期"]][["108-1"]][[2]] <-
+  list(name="產業經濟學")
+str(listExample)
+
+listExample[["學期"]][["108-1"]][[2]][c("teacher","grade")] <- 
+  list(
+    "Wen",
+    88
+    )
+str(listExample)
 ```
 
