@@ -1,0 +1,51 @@
+---
+title: "Untitled"
+author: "oscar"
+date: "2020/6/16"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```{r}
+list_victimAges_female <- jsonlite::fromJSON("https://www.dropbox.com/s/3uijub7xheib405/list_victimAges_female.json?dl=1", 
+    simplifyDataFrame = F)
+str(list_victimAges_female)
+View(list_victimAges_female$數目)
+sum(list_victimAges_female$數目)
+sum(list_victimAges_female$數目, na.rm = T)
+list_victimAges_female$數目 <- as.integer(list_victimAges_female$數目)
+list_victimAges_female$年齡層 <- as.factor(list_victimAges_female$年齡層)
+levels_ages <- levels(list_victimAges_female$年齡層)
+print(levels_ages)
+levels_new <- c(levels_ages[c(12, 13, 1, 8, 2:7, 9:11)])
+levels(list_victimAges_female$`年齡層`) <- levels_new
+print(list_victimAges_female$`年齡層`)
+```
+```{r}
+source("https://www.dropbox.com/s/qsrw069n94k61lj/transcript100to103_list.R?dl=1")
+
+```
+
+
